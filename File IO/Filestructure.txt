@@ -1,8 +1,0 @@
-Base Path
-	Dataloging
-		Log folder 1
-		Log folder 2
-		...
-	Configuration
-		Base Mass elements.csv
-		System configurations.ini
