@@ -110,62 +110,21 @@ AddOutputFilter chunkFilter
 		<Property Name="target.WebServer.ViAccess" Type="Str">+*</Property>
 		<Property Name="target.webservices.SecurityAPIKey" Type="Str">PqVr/ifkAQh+lVrdPIykXlFvg12GhhQFR8H9cUhphgg=:pTe9HRlQuMfJxAG6QCGq7UvoUpJzAzWGKy5SbZ+roSU=</Property>
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
-		<Item Name="Custom" Type="Folder">
-			<Item Name="ControllerLib" Type="Folder">
-				<Item Name="ControllerCore.vi" Type="VI" URL="../Controller library/ControllerCore.vi"/>
-			</Item>
-			<Item Name="File IO" Type="Folder">
-<<<<<<< HEAD
-=======
-				<Item Name="Filestructure.txt" Type="Document" URL="../File IO/Filestructure.txt"/>
-				<Item Name="LoadData.vi" Type="VI" URL="../Macros/LoadData.vi"/>
->>>>>>> origin/master
-				<Item Name="OpenDatalogFileRef.vi" Type="VI" URL="../File IO/OpenDatalogFileRef.vi"/>
-			</Item>
-			<Item Name="Logic" Type="Folder">
-				<Item Name="LatchingActionOnArray.vi" Type="VI" URL="../Logic/LatchingActionOnArray.vi"/>
-			</Item>
-			<Item Name="Macros" Type="Folder">
-				<Item Name="UpdateCOntrollerGlobal.vi" Type="VI" URL="../Macros/UpdateCOntrollerGlobal.vi"/>
-			</Item>
-			<Item Name="Math" Type="Folder">
-				<Item Name="Utility" Type="Folder">
-					<Item Name="MapNumbers.vi" Type="VI" URL="../Math/Utility/MapNumbers.vi"/>
-					<Item Name="NthDerivativeOfScalarVariable.vi" Type="VI" URL="../Math/Utility/NthDerivativeOfScalarVariable.vi"/>
-				</Item>
-			</Item>
-			<Item Name="NavX" Type="Folder">
-				<Item Name="navX-MXP IMU.lvlib" Type="Library" URL="../Navx_Library/navX-MXP Library/navX-MXP IMU.lvlib"/>
-			</Item>
-			<Item Name="Pod Object" Type="Folder">
-				<Item Name="GetSetPodRef.vi" Type="VI" URL="../Pod object libraries/GetSetPodRef.vi"/>
-				<Item Name="GetStateData.vi" Type="VI" URL="../Pod object libraries/GetStateData.vi"/>
-				<Item Name="GetTechnicalData.vi" Type="VI" URL="../Pod object libraries/GetTechnicalData.vi"/>
-				<Item Name="Open Pod.vi" Type="VI" URL="../Pod object libraries/Open Pod.vi"/>
-				<Item Name="Pod Object.ctl" Type="VI" URL="../Pod object libraries/Pod Object.ctl"/>
-				<Item Name="SetDriveMotorOutput.vi" Type="VI" URL="../Pod object libraries/SetDriveMotorOutput.vi"/>
-				<Item Name="SetTechnicalData.vi" Type="VI" URL="../Pod object libraries/SetTechnicalData.vi"/>
-				<Item Name="SetTurretMotorOutput.vi" Type="VI" URL="../Pod object libraries/SetTurretMotorOutput.vi"/>
-			</Item>
-			<Item Name="Variables" Type="Folder">
-				<Item Name="Default global.vi" Type="VI" URL="../Variables/Default global.vi"/>
-				<Item Name="Physical data.vi" Type="VI" URL="../Variables/Physical data.vi"/>
-				<Item Name="References.vi" Type="VI" URL="../Variables/References.vi"/>
-			</Item>
+		<Item Name="Support Code" Type="Folder">
+			<Item Name="Elapsed Times.vi" Type="VI" URL="../Elapsed Times.vi"/>
 		</Item>
-		<Item Name="Default Programs" Type="Folder">
+		<Item Name="Team Code" Type="Folder">
 			<Item Name="Autonomous Independent.vi" Type="VI" URL="../Autonomous Independent.vi"/>
 			<Item Name="Begin.vi" Type="VI" URL="../Begin.vi"/>
 			<Item Name="Disabled.vi" Type="VI" URL="../Disabled.vi"/>
-			<Item Name="Elapsed Times.vi" Type="VI" URL="../Elapsed Times.vi"/>
 			<Item Name="Finish.vi" Type="VI" URL="../Finish.vi"/>
 			<Item Name="Periodic Tasks.vi" Type="VI" URL="../Periodic Tasks.vi"/>
+			<Item Name="Robot Global Data.vi" Type="VI" URL="../Robot Global Data.vi"/>
 			<Item Name="Teleop.vi" Type="VI" URL="../Teleop.vi"/>
 			<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
 			<Item Name="Vision Processing.vi" Type="VI" URL="../Vision Processing.vi"/>
 		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
-		<Item Name="SaveNumericArrayToTDMS.vi" Type="VI" URL="../File IO/SaveNumericArrayToTDMS.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -714,9 +673,15 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_UtilitiesTimebaseConstants.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Utilities/WPI_UtilitiesTimebaseConstants.vi"/>
 				<Item Name="Write Value Core.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/Network Tables/Write Value Core.vi"/>
 			</Item>
+			<Item Name="ControllerCore.vi" Type="VI" URL="../Controller library/ControllerCore.vi"/>
+			<Item Name="Default global.vi" Type="VI" URL="../Variables/Default global.vi"/>
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="GetStateData.vi" Type="VI" URL="../Pod object libraries/GetStateData.vi"/>
+			<Item Name="LatchingActionOnArray.vi" Type="VI" URL="../Logic/LatchingActionOnArray.vi"/>
+			<Item Name="LoadData.vi" Type="VI" URL="../Macros/LoadData.vi"/>
+			<Item Name="navX-MXP IMU.lvlib" Type="Library" URL="../Navx_Library/navX-MXP Library/navX-MXP IMU.lvlib"/>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -729,7 +694,14 @@ AddOutputFilter chunkFilter
 			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="NthDerivativeOfScalarVariable.vi" Type="VI" URL="../Math/Utility/NthDerivativeOfScalarVariable.vi"/>
+			<Item Name="Open Pod.vi" Type="VI" URL="../Pod object libraries/Open Pod.vi"/>
+			<Item Name="OpenDatalogFileRef.vi" Type="VI" URL="../File IO/OpenDatalogFileRef.vi"/>
+			<Item Name="Physical data.vi" Type="VI" URL="../Variables/Physical data.vi"/>
+			<Item Name="References.vi" Type="VI" URL="../Variables/References.vi"/>
+			<Item Name="SaveNumericArrayToTDMS.vi" Type="VI" URL="../File IO/SaveNumericArrayToTDMS.vi"/>
 			<Item Name="SmartDelay.vi" Type="VI" URL="../Macros/SmartDelay.vi"/>
+			<Item Name="UpdateCOntrollerGlobal.vi" Type="VI" URL="../Macros/UpdateCOntrollerGlobal.vi"/>
 			<Item Name="UpdateInertialData.vi" Type="VI" URL="../Macros/UpdateInertialData.vi"/>
 			<Item Name="UpdateNavxData.vi" Type="VI" URL="../Macros/UpdateNavxData.vi"/>
 		</Item>
@@ -746,7 +718,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_compilerOptLevel" Type="Int">0</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">/C/Users/developer/Desktop/Swerve/Builds</Property>
+				<Property Name="Bld_localDestDir" Type="Path">/C/Users/Developer/Desktop/PreseasonSwerveCode/Builds</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">&lt;none&gt;</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{6782B190-04E1-4A41-93AB-3F357B35791E}</Property>
