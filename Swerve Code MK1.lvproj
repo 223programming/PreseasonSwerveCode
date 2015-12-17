@@ -115,6 +115,11 @@ AddOutputFilter chunkFilter
 				<Item Name="ControllerCore.vi" Type="VI" URL="../Controller library/ControllerCore.vi"/>
 			</Item>
 			<Item Name="File IO" Type="Folder">
+<<<<<<< HEAD
+=======
+				<Item Name="Filestructure.txt" Type="Document" URL="../File IO/Filestructure.txt"/>
+				<Item Name="LoadData.vi" Type="VI" URL="../Macros/LoadData.vi"/>
+>>>>>>> origin/master
 				<Item Name="OpenDatalogFileRef.vi" Type="VI" URL="../File IO/OpenDatalogFileRef.vi"/>
 			</Item>
 			<Item Name="Logic" Type="Folder">
@@ -125,6 +130,7 @@ AddOutputFilter chunkFilter
 			</Item>
 			<Item Name="Math" Type="Folder">
 				<Item Name="Utility" Type="Folder">
+					<Item Name="MapNumbers.vi" Type="VI" URL="../Math/Utility/MapNumbers.vi"/>
 					<Item Name="NthDerivativeOfScalarVariable.vi" Type="VI" URL="../Math/Utility/NthDerivativeOfScalarVariable.vi"/>
 				</Item>
 			</Item>
@@ -162,6 +168,7 @@ AddOutputFilter chunkFilter
 		<Item Name="SaveNumericArrayToTDMS.vi" Type="VI" URL="../File IO/SaveNumericArrayToTDMS.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
+				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
 				<Item Name="Acquire Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Acquire Semaphore.vi"/>
 				<Item Name="AddNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/AddNamedSemaphorePrefix.vi"/>
 				<Item Name="Build Entry Assign Buffer.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/Network Tables/Build Entry Assign Buffer.vi"/>
@@ -320,6 +327,7 @@ AddOutputFilter chunkFilter
 				<Item Name="NetComm_UsageReport_report.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UsageReport_report.vi"/>
 				<Item Name="NetComm_UsageReport_ResourceType.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UsageReport_ResourceType.ctl"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
+				<Item Name="NI_LVConfig.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/config.llb/NI_LVConfig.lvlib"/>
 				<Item Name="NI_Matrix.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/Matrix/NI_Matrix.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="NI_Vision_Acquisition_Software.lvlib" Type="Library" URL="/&lt;vilib&gt;/vision/driver/NI_Vision_Acquisition_Software.lvlib"/>
