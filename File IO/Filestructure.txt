@@ -4,23 +4,5 @@ Base Path
 		Log folder 2
 		...
 	Configuration
-		BaseMassElements.csv
-			X,Y,Z,Mass,Name
-			X,Y,Z,Mass,Name
-			...
-		SystemConfigurations.ini
-			Pod_1
-				TurretPID_P
-				TurretPID_I
-				TurretPID_D
-				DrivePID_P
-				DrivePID_I
-				DrivePID_D
-				TurretAngleOffset
-				TurretMotorInverted?
-				TurretEncoderInverted?
-				DriveMotorInverted?
-				DriveEncoderInverted?
-
-				
-				
+		Base Mass elements.csv
+		System configurations.ini
