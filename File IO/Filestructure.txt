@@ -1,8 +1,74 @@
-Base Path
+
+* Dictates the filestructure that we use to organize all of our configuration
+* and Log files. For .ini files, the datatype of each key is indicated by
+* a "-type", where type can be str, bool, I32, or dbl. Keys without a stated datatype
+* are assumed to be floats. Those ending with "?" are assumed to be boolean values.
+
+
+
+Base Path ("\media\sda1\" default)
 	Dataloging
 		Log folder 1
 		Log folder 2
 		...
 	Configuration
-		Base Mass elements.csv
-		System configurations.ini
+		BaseMassElements.csv
+			X,Y,Z,Mass,Name
+			X,Y,Z,Mass,Name
+			...
+		SystemConfigurations.ini
+			Pod0_Drive
+				DriveEncoder_CPfoot
+				DriveEncoder_Location-str	*Either "RIO", "DRV_SRX", or "TRT_SRX"*
+				DriveEncoder_RoboRIO_PinA-I32
+				DriveEncoder_RoboRIO_PinB-I32
+				DriveEncoder_Invert?
+				DriveMotor_PID_P
+				DriveMotor_PID_I
+				DriveMotor_PID_D
+				DriveMotor_Invert?
+				DriveMotor_IsCanSRX?
+				DriveMotor_CANorPWM_Channel-I32
+			Pod0_Turret
+				TurretEncoder_Invert?
+				TurretEncoder_ZeroPosVolts
+				TurretEncoder_Location-str	*Either "RIO", "DRV_SRX", or "TRT_SRX"*
+				TurretEncoder_RIO_AnalogChannel-I32
+				TurretMotor_Invert?
+				TurretMotor_PID_P
+				TurretMotor_PID_I
+				TurretMotor_PID_D
+				TurretMotor_IsCanSRX?
+				TurretMotor_CANorPWM_Channel-I32
+			Pod0_Misc
+				PodPosition_X
+				PodPosition_Y
+			...
+
+
+			Pod3_Drive
+				DriveEncoder_CPfoot
+				DriveEncoder_Location-str	*Either "RIO", "DRV_SRX", or "TRT_SRX"*
+				DriveEncoder_RoboRIO_PinA-I32
+				DriveEncoder_RoboRIO_PinB-I32
+				DriveEncoder_Invert?
+				DriveMotor_PID_P
+				DriveMotor_PID_I
+				DriveMotor_PID_D
+				DriveMotor_Invert?
+				DriveMotor_IsCanSRX?
+				DriveMotor_CANorPWM_Channel-I32
+			Pod3_Turret
+				TurretEncoder_Invert?
+				TurretEncoder_ZeroPosVolts
+				TurretEncoder_Location-str	*Either "RIO", "DRV_SRX", or "TRT_SRX"*
+				TuerretEncoder_Roborio_AnalogChannel-I32
+				TurretMotor_Invert?
+				TurretMotor_PID_P
+				TurretMotor_PID_I
+				TurretMotor_PID_D
+				TurretMotor_IsCanSRX?
+				TurretMotor_CANorPWM_Channel-I32
+			Pod3_Misc
+				PodPosition_X
+				PodPosition_Y
