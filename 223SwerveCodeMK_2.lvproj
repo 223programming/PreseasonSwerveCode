@@ -123,6 +123,7 @@ AddOutputFilter chunkFilter
 					<Item Name="LoadPodDriveData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/LoadPodDriveData.vi"/>
 					<Item Name="LoadPodMiscData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/LoadPodMiscData.vi"/>
 					<Item Name="LoadPodTurretData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/LoadPodTurretData.vi"/>
+					<Item Name="SaveGeneralConfigData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/SaveGeneralConfigData.vi"/>
 					<Item Name="SavePodDataToFile.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/SavePodDataToFile.vi"/>
 				</Item>
 				<Item Name="Filestructure.txt" Type="Document" URL="../File IO/Filestructure.txt"/>
@@ -143,18 +144,26 @@ AddOutputFilter chunkFilter
 			</Item>
 			<Item Name="Math" Type="Folder">
 				<Item Name="Utility" Type="Folder">
+					<Item Name="AddPolarVectors.vi" Type="VI" URL="../Math/Utility/AddPolarVectors.vi"/>
+					<Item Name="CleanJoystickAnalogValues.vi" Type="VI" URL="../Math/Utility/CleanJoystickAnalogValues.vi"/>
 					<Item Name="MapNumbers.vi" Type="VI" URL="../Math/Utility/MapNumbers.vi"/>
 					<Item Name="NthDerivativeOfScalarVariable.vi" Type="VI" URL="../Math/Utility/NthDerivativeOfScalarVariable.vi"/>
 				</Item>
+			</Item>
+			<Item Name="Navigation Systems" Type="Folder">
+				<Item Name="CalcPodOutputVectors.vi" Type="VI" URL="../Navigation Systems/CalcPodOutputVectors.vi"/>
+				<Item Name="SetPodOutputVectors.vi" Type="VI" URL="../Navigation Systems/SetPodOutputVectors.vi"/>
 			</Item>
 			<Item Name="Navx_Library" Type="Folder">
 				<Item Name="navX-MXP IMU.lvlib" Type="Library" URL="../Navx_Library/navX-MXP Library/navX-MXP IMU.lvlib"/>
 			</Item>
 			<Item Name="Pod object library_new" Type="Folder">
+				<Item Name="AquireRawPodsData.vi" Type="VI" URL="../Pod object library_New/AquireRawPodsData.vi"/>
 				<Item Name="CloseAllPods.vi" Type="VI" URL="../Pod object library_New/CloseAllPods.vi"/>
 				<Item Name="GetPodsStateData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/GetPodsStateData.vi"/>
 				<Item Name="OpenAllPods.vi" Type="VI" URL="../Pod object library_New/OpenAllPods.vi"/>
 				<Item Name="Pod Object.ctl" Type="VI" URL="../Pod object library_New/Pod Object.ctl"/>
+				<Item Name="SetTurretOutput.vi" Type="VI" URL="../Pod object library_New/SetTurretOutput.vi"/>
 				<Item Name="UpdatePodConfigData.vi" Type="VI" URL="../Pod object library_New/UpdatePodConfigData.vi"/>
 			</Item>
 			<Item Name="SwerveKinematics_v2" Type="Folder">
@@ -173,8 +182,9 @@ AddOutputFilter chunkFilter
 			</Item>
 		</Item>
 		<Item Name="Default Code" Type="Folder">
-			<Item Name="Autonomous Independent.vi" Type="VI" URL="../Default Code/Autonomous Independent.vi"/>
+			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="Begin.vi" Type="VI" URL="../Default Code/Begin.vi"/>
+			<Item Name="Autonomous Independent.vi" Type="VI" URL="../Default Code/Autonomous Independent.vi"/>
 			<Item Name="Disabled.vi" Type="VI" URL="../Default Code/Disabled.vi"/>
 			<Item Name="Elapsed Times.vi" Type="VI" URL="../Default Code/Elapsed Times.vi"/>
 			<Item Name="Finish.vi" Type="VI" URL="../Default Code/Finish.vi"/>
@@ -184,9 +194,7 @@ AddOutputFilter chunkFilter
 			<Item Name="Test.vi" Type="VI" URL="../Default Code/Test.vi"/>
 			<Item Name="Vision Processing.vi" Type="VI" URL="../Default Code/Vision Processing.vi"/>
 		</Item>
-		<Item Name="AquireRawPodsData.vi" Type="VI" URL="../Pod object library_New/AquireRawPodsData.vi"/>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Default Code/Robot Main.vi"/>
-		<Item Name="SaveGeneralConfigData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/SaveGeneralConfigData.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -343,6 +351,7 @@ AddOutputFilter chunkFilter
 				<Item Name="keyboardAcquire.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/inputDevices.llb/keyboardAcquire.vi"/>
 				<Item Name="Longest Line Length in Pixels.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Longest Line Length in Pixels.vi"/>
 				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
+				<Item Name="lvpidtkt.dll" Type="Document" URL="/&lt;vilib&gt;/addons/control/pid/lvpidtkt.dll"/>
 				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
 				<Item Name="Make Table Operation.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/Network Tables/Make Table Operation.ctl"/>
 				<Item Name="Manage Connection List.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/Network Tables/Manage Connection List.vi"/>
@@ -365,10 +374,13 @@ AddOutputFilter chunkFilter
 				<Item Name="NetComm_UnloadC++StartupProgram.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UnloadC++StartupProgram.vi"/>
 				<Item Name="NetComm_UsageReport_report.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UsageReport_report.vi"/>
 				<Item Name="NetComm_UsageReport_ResourceType.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UsageReport_ResourceType.ctl"/>
+				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
 				<Item Name="NI_LVConfig.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/config.llb/NI_LVConfig.lvlib"/>
 				<Item Name="NI_Matrix.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/Matrix/NI_Matrix.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
+				<Item Name="NI_PID__prctrl compat.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID__prctrl compat.lvlib"/>
+				<Item Name="NI_PID_pid.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID_pid.lvlib"/>
 				<Item Name="NI_Vision_Acquisition_Software.lvlib" Type="Library" URL="/&lt;vilib&gt;/vision/driver/NI_Vision_Acquisition_Software.lvlib"/>
 				<Item Name="Not A Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Not A Semaphore.vi"/>
 				<Item Name="Not Found Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Not Found Dialog.vi"/>
@@ -778,6 +790,7 @@ AddOutputFilter chunkFilter
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="lvinput.dll" Type="Document" URL="/&lt;resource&gt;/lvinput.dll"/>
 			<Item Name="Map Values.vi" Type="VI" URL="../Swerve Kinematics/Map Values.vi"/>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">

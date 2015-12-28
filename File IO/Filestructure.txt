@@ -29,6 +29,8 @@ Base Path ("\media\sda1\" default)
 				DriveMotor_Invert?
 				DriveMotor_IsCanSRX?
 				DriveMotor_CANorPWM_Channel-I32
+				DriveMotor_MaxOutput
+				DriveMotor_MinOutput
 			Pod0_Turret
 				TurretEncoder_Invert?
 				TurretEncoder_ZeroPosVolts
@@ -40,9 +42,13 @@ Base Path ("\media\sda1\" default)
 				TurretMotor_PID_D
 				TurretMotor_IsCanSRX?
 				TurretMotor_CANorPWM_Channel-I32
+				TurretMotor_MaxOutput
+				TurretMotor_MinOutput
 			Pod0_Misc
 				PodPosition_X
 				PodPosition_Y
+				PDP_Channel_Drive-I32
+				PDP_Channel_Turret-I32
 			...
 
 
@@ -58,6 +64,8 @@ Base Path ("\media\sda1\" default)
 				DriveMotor_Invert?
 				DriveMotor_IsCanSRX?
 				DriveMotor_CANorPWM_Channel-I32
+				DriveMotor_MaxOutput
+				DriveMotor_MinOutput
 			Pod3_Turret
 				TurretEncoder_Invert?
 				TurretEncoder_ZeroPosVolts
@@ -69,6 +77,17 @@ Base Path ("\media\sda1\" default)
 				TurretMotor_PID_D
 				TurretMotor_IsCanSRX?
 				TurretMotor_CANorPWM_Channel-I32
+				TurretMotor_MaxOutput
+				TurretMotor_MinOutput
 			Pod3_Misc
 				PodPosition_X
 				PodPosition_Y
+				PDP_Channel_Drive-I32
+				PDP_Channel_Turret-I32
+
+
+			GeneralConfiguration
+				PodCount-I32
+				PDP_CAN_ID-I32
+				PCM_CAN_ID-I32
+				BaseRobotMass
