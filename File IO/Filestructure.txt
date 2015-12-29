@@ -91,3 +91,21 @@ Base Path ("\media\sda1\" default)
 				PDP_CAN_ID-I32
 				PCM_CAN_ID-I32
 				BaseRobotMass
+
+			DriveMotorSpecs
+				FreeCurrent
+				StallCurrent
+				StallTorque
+				FreeSpeed
+				GearRatio
+				Efficiency
+				Resistance
+
+			TurretMotorSpecs
+				FreeCurrent
+				StallCurrent
+				StallTorque
+				FreeSpeed
+				GearRatio
+				Efficiency
+				Resistance

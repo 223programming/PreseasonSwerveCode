@@ -143,11 +143,17 @@ AddOutputFilter chunkFilter
 				<Item Name="UpdateNavxData.vi" Type="VI" URL="../Macros/UpdateNavxData.vi"/>
 			</Item>
 			<Item Name="Math" Type="Folder">
+				<Item Name="Physics calculations" Type="Folder">
+					<Item Name="CalcMassSubsets.vi" Type="VI" URL="../Math/Physics Calculations/CalcMassSubsets.vi"/>
+					<Item Name="CalcMotorCurrent.vi" Type="VI" URL="../Math/Physics Calculations/CalcMotorCurrent.vi"/>
+					<Item Name="CalcMotorTorque.vi" Type="VI" URL="../Math/Physics Calculations/CalcMotorTorque.vi"/>
+				</Item>
 				<Item Name="Utility" Type="Folder">
 					<Item Name="AddPolarVectors.vi" Type="VI" URL="../Math/Utility/AddPolarVectors.vi"/>
 					<Item Name="CleanJoystickAnalogValues.vi" Type="VI" URL="../Math/Utility/CleanJoystickAnalogValues.vi"/>
 					<Item Name="MapNumbers.vi" Type="VI" URL="../Math/Utility/MapNumbers.vi"/>
 					<Item Name="NthDerivativeOfScalarVariable.vi" Type="VI" URL="../Math/Utility/NthDerivativeOfScalarVariable.vi"/>
+					<Item Name="SubtractPolarVectors.vi" Type="VI" URL="../Math/Utility/SubtractPolarVectors.vi"/>
 				</Item>
 			</Item>
 			<Item Name="Navigation Systems" Type="Folder">
@@ -194,6 +200,7 @@ AddOutputFilter chunkFilter
 			<Item Name="Test.vi" Type="VI" URL="../Default Code/Test.vi"/>
 			<Item Name="Vision Processing.vi" Type="VI" URL="../Default Code/Vision Processing.vi"/>
 		</Item>
+		<Item Name="LoadMotorData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/LoadMotorData.vi"/>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Default Code/Robot Main.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -374,8 +381,10 @@ AddOutputFilter chunkFilter
 				<Item Name="NetComm_UnloadC++StartupProgram.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UnloadC++StartupProgram.vi"/>
 				<Item Name="NetComm_UsageReport_report.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UsageReport_report.vi"/>
 				<Item Name="NetComm_UsageReport_ResourceType.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UsageReport_ResourceType.ctl"/>
+				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
 				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
+				<Item Name="NI_Gmath.lvlib" Type="Library" URL="/&lt;vilib&gt;/gmath/NI_Gmath.lvlib"/>
 				<Item Name="NI_LVConfig.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/config.llb/NI_LVConfig.lvlib"/>
 				<Item Name="NI_Matrix.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/Matrix/NI_Matrix.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
