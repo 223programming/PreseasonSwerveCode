@@ -99,7 +99,7 @@ Base Path ("\media\sda1\" default)
 				FreeSpeed
 				GearRatio
 				Efficiency
-				Resistance
+				Moment
 
 			TurretMotorSpecs
 				FreeCurrent
@@ -108,4 +108,4 @@ Base Path ("\media\sda1\" default)
 				FreeSpeed
 				GearRatio
 				Efficiency
-				Resistance
+				Moment

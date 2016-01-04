@@ -120,13 +120,16 @@ AddOutputFilter chunkFilter
 				<Item Name="Configuration File Utilities" Type="Folder">
 					<Item Name="LoadAllPodsData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/LoadAllPodsData.vi"/>
 					<Item Name="LoadGeneralConfigData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/LoadGeneralConfigData.vi"/>
+					<Item Name="LoadMotorData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/LoadMotorData.vi"/>
 					<Item Name="LoadPodDriveData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/LoadPodDriveData.vi"/>
 					<Item Name="LoadPodMiscData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/LoadPodMiscData.vi"/>
 					<Item Name="LoadPodTurretData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/LoadPodTurretData.vi"/>
 					<Item Name="SaveGeneralConfigData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/SaveGeneralConfigData.vi"/>
+					<Item Name="SaveMotorData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/SaveMotorData.vi"/>
 					<Item Name="SavePodDataToFile.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/SavePodDataToFile.vi"/>
 				</Item>
 				<Item Name="Filestructure.txt" Type="Document" URL="../File IO/Filestructure.txt"/>
+				<Item Name="LoadData.vi" Type="VI" URL="../Macros/LoadData.vi"/>
 				<Item Name="LogPodStateData.vi" Type="VI" URL="../File IO/LogPodStateData.vi"/>
 				<Item Name="LogRobotPositionData.vi" Type="VI" URL="../File IO/LogRobotPositionData.vi"/>
 				<Item Name="OpenDatalogFileRef.vi" Type="VI" URL="../File IO/OpenDatalogFileRef.vi"/>
@@ -136,7 +139,6 @@ AddOutputFilter chunkFilter
 				<Item Name="LatchingActionOnArray.vi" Type="VI" URL="../Logic/LatchingActionOnArray.vi"/>
 			</Item>
 			<Item Name="Macros" Type="Folder">
-				<Item Name="LoadData.vi" Type="VI" URL="../Macros/LoadData.vi"/>
 				<Item Name="SmartDelay.vi" Type="VI" URL="../Macros/SmartDelay.vi"/>
 				<Item Name="UpdateCOntrollerGlobal.vi" Type="VI" URL="../Macros/UpdateCOntrollerGlobal.vi"/>
 				<Item Name="UpdateInertialData.vi" Type="VI" URL="../Macros/UpdateInertialData.vi"/>
@@ -144,21 +146,35 @@ AddOutputFilter chunkFilter
 			</Item>
 			<Item Name="Math" Type="Folder">
 				<Item Name="Physics calculations" Type="Folder">
+					<Item Name="Solve Motor" Type="Folder">
+						<Property Name="NI.SortType" Type="Int">3</Property>
+						<Item Name="SolveMotor_Speed,Torque.vi" Type="VI" URL="../Math/Physics Calculations/SolveMotor_Speed,Torque.vi"/>
+						<Item Name="SolveMotor_Volts,Current.vi" Type="VI" URL="../Math/Physics Calculations/SolveMotor_Volts,Current.vi"/>
+						<Item Name="SolveMotor_Volts,Speed.vi" Type="VI" URL="../Math/Physics Calculations/SolveMotor_Volts,Speed.vi"/>
+						<Item Name="SolveMotor_Volts,Torque.vi" Type="VI" URL="../Math/Physics Calculations/SolveMotor_Volts,Torque.vi"/>
+					</Item>
 					<Item Name="CalcMassSubsets.vi" Type="VI" URL="../Math/Physics Calculations/CalcMassSubsets.vi"/>
-					<Item Name="CalcMotorCurrent.vi" Type="VI" URL="../Math/Physics Calculations/CalcMotorCurrent.vi"/>
-					<Item Name="CalcMotorTorque.vi" Type="VI" URL="../Math/Physics Calculations/CalcMotorTorque.vi"/>
+					<Item Name="GetTorqueInRange" Type="VI" URL="../Math/Physics Calculations/GetTorqueInRange"/>
+					<Item Name="SolveMotor.vi" Type="VI" URL="../Math/Physics Calculations/SolveMotor.vi"/>
 				</Item>
 				<Item Name="Utility" Type="Folder">
 					<Item Name="AddPolarVectors.vi" Type="VI" URL="../Math/Utility/AddPolarVectors.vi"/>
 					<Item Name="CleanJoystickAnalogValues.vi" Type="VI" URL="../Math/Utility/CleanJoystickAnalogValues.vi"/>
 					<Item Name="MapNumbers.vi" Type="VI" URL="../Math/Utility/MapNumbers.vi"/>
 					<Item Name="NthDerivativeOfScalarVariable.vi" Type="VI" URL="../Math/Utility/NthDerivativeOfScalarVariable.vi"/>
+					<Item Name="PolarizePodStateData.vi" Type="VI" URL="../Math/Misc/PolarizePodStateData.vi"/>
 					<Item Name="SubtractPolarVectors.vi" Type="VI" URL="../Math/Utility/SubtractPolarVectors.vi"/>
 				</Item>
 			</Item>
 			<Item Name="Navigation Systems" Type="Folder">
+				<Item Name="CalcMinPodControlRuntime.vi" Type="VI" URL="../Navigation Systems/CalcMinPodControlRuntime.vi"/>
 				<Item Name="CalcPodOutputVectors.vi" Type="VI" URL="../Navigation Systems/CalcPodOutputVectors.vi"/>
+				<Item Name="CalcPodOutputVoltages.vi" Type="VI" URL="../Navigation Systems/CalcPodOutputVoltages.vi"/>
+				<Item Name="ComputePodCostFunctions.vi" Type="VI" URL="../Navigation Systems/ComputePodCostFunctions.vi"/>
+				<Item Name="CorrectPodControlTimestep.vi" Type="VI" URL="../Navigation Systems/CorrectPodControlTimestep.vi"/>
+				<Item Name="PodControlCostFunctionCore.vi" Type="VI" URL="../Navigation Systems/PodControlCostFunctionCore.vi"/>
 				<Item Name="SetPodOutputVectors.vi" Type="VI" URL="../Navigation Systems/SetPodOutputVectors.vi"/>
+				<Item Name="VisualizePodVectors_v2.vi" Type="VI" URL="../Navigation Systems/VisualizePodVectors_v2.vi"/>
 			</Item>
 			<Item Name="Navx_Library" Type="Folder">
 				<Item Name="navX-MXP IMU.lvlib" Type="Library" URL="../Navx_Library/navX-MXP Library/navX-MXP IMU.lvlib"/>
@@ -169,6 +185,7 @@ AddOutputFilter chunkFilter
 				<Item Name="GetPodsStateData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/GetPodsStateData.vi"/>
 				<Item Name="OpenAllPods.vi" Type="VI" URL="../Pod object library_New/OpenAllPods.vi"/>
 				<Item Name="Pod Object.ctl" Type="VI" URL="../Pod object library_New/Pod Object.ctl"/>
+				<Item Name="SetAllVoltageOutputs.vi" Type="VI" URL="../Pod object library_New/SetAllVoltageOutputs.vi"/>
 				<Item Name="SetTurretOutput.vi" Type="VI" URL="../Pod object library_New/SetTurretOutput.vi"/>
 				<Item Name="UpdatePodConfigData.vi" Type="VI" URL="../Pod object library_New/UpdatePodConfigData.vi"/>
 			</Item>
@@ -200,8 +217,10 @@ AddOutputFilter chunkFilter
 			<Item Name="Test.vi" Type="VI" URL="../Default Code/Test.vi"/>
 			<Item Name="Vision Processing.vi" Type="VI" URL="../Default Code/Vision Processing.vi"/>
 		</Item>
-		<Item Name="LoadMotorData.vi" Type="VI" URL="../File IO/Configuration_File_Utilities/LoadMotorData.vi"/>
+		<Item Name="CalcAngleChange.vi" Type="VI" URL="../Navigation Systems/CalcAngleChange.vi"/>
+		<Item Name="CalcPossibleTurretMoves.vi" Type="VI" URL="../Navigation Systems/CalcPossibleTurretMoves.vi"/>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Default Code/Robot Main.vi"/>
+		<Item Name="UpdateRobotModeVariables.vi" Type="VI" URL="../Macros/UpdateRobotModeVariables.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -381,6 +400,7 @@ AddOutputFilter chunkFilter
 				<Item Name="NetComm_UnloadC++StartupProgram.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UnloadC++StartupProgram.vi"/>
 				<Item Name="NetComm_UsageReport_report.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UsageReport_report.vi"/>
 				<Item Name="NetComm_UsageReport_ResourceType.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UsageReport_ResourceType.ctl"/>
+				<Item Name="NI_AAL_Angle.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AAL_Angle.lvlib"/>
 				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
 				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
@@ -607,6 +627,7 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_CANTalonSRX_MessageIDs.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_MessageIDs.ctl"/>
 				<Item Name="WPI_CANTalonSRX_Params.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_Params.ctl"/>
 				<Item Name="WPI_CANTalonSRX_Receive.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_Receive.vi"/>
+				<Item Name="WPI_CANTalonSRX_ResetIntegralAccumulator.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ResetIntegralAccumulator.vi"/>
 				<Item Name="WPI_CANTalonSRX_Send.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_Send.vi"/>
 				<Item Name="WPI_CANTalonSRX_SetParameter.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_SetParameter.vi"/>
 				<Item Name="WPI_CompressorDevRef.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Compressor/WPI_CompressorDevRef.ctl"/>
@@ -668,6 +689,7 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_EncoderERRInvalidDistancePerCount.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Encoder/WPI_EncoderERRInvalidDistancePerCount.vi"/>
 				<Item Name="WPI_EncoderGet.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Encoder/WPI_EncoderGet.vi"/>
 				<Item Name="WPI_EncoderOpen.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Encoder/WPI_EncoderOpen.vi"/>
+				<Item Name="WPI_EncoderReset.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Encoder/WPI_EncoderReset.vi"/>
 				<Item Name="WPI_EncoderStop.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Encoder/WPI_EncoderStop.vi"/>
 				<Item Name="WPI_EncoderType.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Encoder/WPI_EncoderType.ctl"/>
 				<Item Name="WPI_ERRAcquireInvalidPWMChannelIdx.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/PWM/WPI_ERRAcquireInvalidPWMChannelIdx.vi"/>
